@@ -1,4 +1,4 @@
-ZSH=$HOME/.oh-my-zsh
+
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"
@@ -70,3 +70,14 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
+eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
+
+export PYTHONPATH="/Users/siyingpng/code/siyingpng/data-context-and-setup:$PYTHONPATH"
+export PYTHONPATH="/Users/siyingpng/code/siyingpng/data-olist_data_metric:$PYTHONPATH"
