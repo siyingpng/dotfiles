@@ -70,14 +70,16 @@ export EDITOR=code
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
+eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
+
+export PYTHONPATH="/Users/siyingpng/code/siyingpng/data-context-and-setup:$PYTHONPATH"
+export PYTHONPATH="/Users/siyingpng/code/siyingpng/data-olist_data_metric:$PYTHONPATH"
+eval "$(direnv hook zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
-eval "$(direnv hook zsh)"
-eval "$(direnv hook zsh)"
-
-export PYTHONPATH="/Users/siyingpng/code/siyingpng/data-context-and-setup:$PYTHONPATH"
-export PYTHONPATH="/Users/siyingpng/code/siyingpng/data-olist_data_metric:$PYTHONPATH"
+export GOOGLE_APPLICATION_CREDENTIALS=/path/to/the/SERVICE_ACCOUNT_JSON_FILE_CONTAINING_YOUR_SECRET_KEY.json
